@@ -1,0 +1,6 @@
+*
+!/.gitignore.d
+!/.gitignore.d/misc
+!/.local
+!/.local/lib
+!/.local/lib/firefox@
