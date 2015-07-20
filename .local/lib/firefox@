@@ -1,0 +1,7 @@
+#!/bin/sh
+
+profile=${0##*\@}
+
+if [ -d "${HOME}/.mozilla/firefox/${profile}" ]; then
+  firefox -P "${profile}" $@
+fi
