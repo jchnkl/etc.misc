@@ -1,7 +1,10 @@
 #!/bin/sh
 
-profile=${0##*\@}
+arg0=$(basename $0)
+profile=${arg0#firefox@}
 
-if [ -d "${HOME}/.mozilla/firefox/${profile}" ]; then
-  firefox -P "${profile}" $@
+if [ -z "${profile}" ]; then
+    firefox --new-instance --ProfileManager
+else
+    firefox -P ${arg0#firefox@} $@
 fi
