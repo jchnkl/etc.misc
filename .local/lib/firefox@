@@ -4,7 +4,7 @@ arg0=$(basename $0)
 profile=${arg0#firefox@}
 
 if [ -z "${profile}" ]; then
-    firefox --new-instance --ProfileManager
+    exec firefox --new-instance --ProfileManager
 else
-    firefox -P ${arg0#firefox@} $@
+    exec firefox -P ${arg0#firefox@} $@
 fi
